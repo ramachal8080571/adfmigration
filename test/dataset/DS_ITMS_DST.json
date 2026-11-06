@@ -1,0 +1,20 @@
+{
+	"name": "DS_ITMS_DST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ITMS_DST",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "itmsoutput"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "adfdevapriso1",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7e9fbe35-d9ba-401e-9b04-63f05652c0da",
+		"tenantId": "4a750873-b408-4af9-a66e-aa2322f6cee3"
+	}
+}

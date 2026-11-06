@@ -1,0 +1,45 @@
+{
+	"name": "PL_SP_INSERT",
+	"properties": {
+		"activities": [
+			{
+				"name": "InsertCustomer",
+				"description": "Insert data into Customer table using adf",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[InsertCustomer]",
+					"storedProcedureParameters": {
+						"CustomerID": {
+							"value": "1",
+							"type": "Int32"
+						},
+						"FirstName": {
+							"value": "ram",
+							"type": "String"
+						},
+						"LastName": {
+							"value": "prajapati",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_SQLSEEVER",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-02T17:51:03Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

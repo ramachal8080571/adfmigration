@@ -1,0 +1,25 @@
+{
+	"name": "ITMS_EVENT_TRIGGER1",
+	"properties": {
+		"description": "ITMS_EVENT_TRIGGER1",
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_ITMS_EVENT_TRIGGER",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/eventinput/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/b4778500-4c39-4ff9-8563-43d70d97782e/resourceGroups/rg_dev_apriso/providers/Microsoft.Storage/storageAccounts/itmssrc",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

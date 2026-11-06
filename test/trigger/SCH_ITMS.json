@@ -1,0 +1,24 @@
+{
+	"name": "SCH_ITMS",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_ITMS_TRIGGER",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 4,
+				"startTime": "2026-11-05T16:22:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
