@@ -1,0 +1,201 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevapriso1"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"DS_FILTER_CSV_DST_accountKey": {
+			"value": ""
+		},
+		"DS_PARQUET_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_BIKESTORE_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_BIKESTORE1_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_FILE_SRC_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_FILTER_1_accountKey": {
+			"value": ""
+		},
+		"LS_DEL_ADLS_DST_accountKey": {
+			"value": ""
+		},
+		"LS_DST_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_EXCEL_SRC_accountKey": {
+			"value": ""
+		},
+		"LS_FILTER_CSV_DST_accountKey": {
+			"value": ""
+		},
+		"LS_FILTER_SALES_SRC_accountKey": {
+			"value": ""
+		},
+		"LS_GET_METADATA_MUTI_accountKey": {
+			"value": ""
+		},
+		"LS_IMTS_EVENT_DST_accountKey": {
+			"value": ""
+		},
+		"LS_INPUT_MULTI_FILE_accountKey": {
+			"value": ""
+		},
+		"LS_ITMS_DST_accountKey": {
+			"value": ""
+		},
+		"LS_ITMS_SRC_accountKey": {
+			"value": ""
+		},
+		"LS_LOG_connectionString": {
+			"value": ""
+		},
+		"LS_Lookup_accountKey": {
+			"value": ""
+		},
+		"LS_MULTI_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_MULTI_CSV_DST_accountKey": {
+			"value": ""
+		},
+		"LS_PARQUET_accountKey": {
+			"value": ""
+		},
+		"LS_SQLSEEVER_password": {
+			"value": ""
+		},
+		"LS_SWITCH_accountKey": {
+			"value": ""
+		},
+		"LS_SWITCH_DST_accountKey": {
+			"value": ""
+		},
+		"LS_sales_DST_accountKey": {
+			"value": ""
+		},
+		"LS_switch_txt_accountKey": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://itmssrc.dfs.core.windows.net/"
+		},
+		"DS_FILTER_CSV_DST_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"DS_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_ADLS_BIKESTORE_properties_typeProperties_url": {
+			"value": "https://sgadlsram1.dfs.core.windows.net/"
+		},
+		"LS_ADLS_BIKESTORE1_properties_typeProperties_url": {
+			"value": "https://sgadlsram1.dfs.core.windows.net/"
+		},
+		"LS_CSV_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_CSV_FILE_SRC_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_CSV_FILTER_1_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_DEL_ADLS_DST_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_DST_ADLS_properties_typeProperties_url": {
+			"value": "https://sgadlsram1.dfs.core.windows.net/"
+		},
+		"LS_EXCEL_SRC_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_FILTER_CSV_DST_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_FILTER_SALES_SRC_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_GET_METADATA_MUTI_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_IMTS_EVENT_DST_properties_typeProperties_url": {
+			"value": "https://itmsdst.dfs.core.windows.net/"
+		},
+		"LS_INPUT_MULTI_FILE_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_ITMS_DST_properties_typeProperties_url": {
+			"value": "https://itmsdst.dfs.core.windows.net/"
+		},
+		"LS_ITMS_SRC_properties_typeProperties_url": {
+			"value": "https://itmssrc.dfs.core.windows.net/"
+		},
+		"LS_Lookup_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_MULTI_CSV_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_MULTI_CSV_DST_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_SQLSEEVER_properties_typeProperties_server": {
+			"value": "DESKTOP-VDI86GH\\SAFRAN"
+		},
+		"LS_SQLSEEVER_properties_typeProperties_database": {
+			"value": "Bikestores"
+		},
+		"LS_SQLSEEVER_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"LS_SWITCH_properties_typeProperties_url": {
+			"value": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_SWITCH_DST_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_sales_DST_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_switch_txt_properties_typeProperties_url": {
+			"value": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "DESKTOP-VDI86GH\\SAFRAN"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "bikestores"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "safran"
+		},
+		"ITMS_EVENT_TRIGGER1_properties_typeProperties_scope": {
+			"value": "/subscriptions/b4778500-4c39-4ff9-8563-43d70d97782e/resourceGroups/rg_dev_apriso/providers/Microsoft.Storage/storageAccounts/itmssrc"
+		}
+	}
+}

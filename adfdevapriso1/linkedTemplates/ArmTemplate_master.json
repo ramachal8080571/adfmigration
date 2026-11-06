@@ -1,0 +1,550 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdevapriso1"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"DS_FILTER_CSV_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_FILTER_CSV_DST'"
+		},
+		"DS_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_PARQUET'"
+		},
+		"LS_ADLS_BIKESTORE_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_BIKESTORE'"
+		},
+		"LS_ADLS_BIKESTORE1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_BIKESTORE1'"
+		},
+		"LS_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV'"
+		},
+		"LS_CSV_FILE_SRC_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_FILE_SRC'"
+		},
+		"LS_CSV_FILTER_1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_FILTER_1'"
+		},
+		"LS_DEL_ADLS_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DEL_ADLS_DST'"
+		},
+		"LS_DST_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DST_ADLS'"
+		},
+		"LS_EXCEL_SRC_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_EXCEL_SRC'"
+		},
+		"LS_FILTER_CSV_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_FILTER_CSV_DST'"
+		},
+		"LS_FILTER_SALES_SRC_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_FILTER_SALES_SRC'"
+		},
+		"LS_GET_METADATA_MUTI_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_GET_METADATA_MUTI'"
+		},
+		"LS_IMTS_EVENT_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_IMTS_EVENT_DST'"
+		},
+		"LS_INPUT_MULTI_FILE_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_INPUT_MULTI_FILE'"
+		},
+		"LS_ITMS_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ITMS_DST'"
+		},
+		"LS_ITMS_SRC_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ITMS_SRC'"
+		},
+		"LS_LOG_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_LOG'"
+		},
+		"LS_Lookup_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Lookup'"
+		},
+		"LS_MULTI_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_MULTI_CSV'"
+		},
+		"LS_MULTI_CSV_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_MULTI_CSV_DST'"
+		},
+		"LS_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_PARQUET'"
+		},
+		"LS_SQLSEEVER_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSEEVER'"
+		},
+		"LS_SWITCH_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SWITCH'"
+		},
+		"LS_SWITCH_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SWITCH_DST'"
+		},
+		"LS_sales_DST_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_sales_DST'"
+		},
+		"LS_switch_txt_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_switch_txt'"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://itmssrc.dfs.core.windows.net/"
+		},
+		"DS_FILTER_CSV_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"DS_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_ADLS_BIKESTORE_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sgadlsram1.dfs.core.windows.net/"
+		},
+		"LS_ADLS_BIKESTORE1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sgadlsram1.dfs.core.windows.net/"
+		},
+		"LS_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_CSV_FILE_SRC_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_CSV_FILTER_1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_DEL_ADLS_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_DST_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sgadlsram1.dfs.core.windows.net/"
+		},
+		"LS_EXCEL_SRC_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_FILTER_CSV_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_FILTER_SALES_SRC_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_GET_METADATA_MUTI_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_IMTS_EVENT_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://itmsdst.dfs.core.windows.net/"
+		},
+		"LS_INPUT_MULTI_FILE_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_ITMS_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://itmsdst.dfs.core.windows.net/"
+		},
+		"LS_ITMS_SRC_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://itmssrc.dfs.core.windows.net/"
+		},
+		"LS_Lookup_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_MULTI_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_MULTI_CSV_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_SQLSEEVER_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-VDI86GH\\SAFRAN"
+		},
+		"LS_SQLSEEVER_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Bikestores"
+		},
+		"LS_SQLSEEVER_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"LS_SWITCH_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexcelsrc1.dfs.core.windows.net/"
+		},
+		"LS_SWITCH_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_sales_DST_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"LS_switch_txt_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevexceldst1.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-VDI86GH\\SAFRAN"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "bikestores"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "safran"
+		},
+		"ITMS_EVENT_TRIGGER1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/b4778500-4c39-4ff9-8563-43d70d97782e/resourceGroups/rg_dev_apriso/providers/Microsoft.Storage/storageAccounts/itmssrc"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdevapriso1_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"DS_FILTER_CSV_DST_accountKey": {
+						"value": "[parameters('DS_FILTER_CSV_DST_accountKey')]"
+					},
+					"DS_PARQUET_accountKey": {
+						"value": "[parameters('DS_PARQUET_accountKey')]"
+					},
+					"LS_ADLS_BIKESTORE_accountKey": {
+						"value": "[parameters('LS_ADLS_BIKESTORE_accountKey')]"
+					},
+					"LS_ADLS_BIKESTORE1_accountKey": {
+						"value": "[parameters('LS_ADLS_BIKESTORE1_accountKey')]"
+					},
+					"LS_CSV_accountKey": {
+						"value": "[parameters('LS_CSV_accountKey')]"
+					},
+					"LS_CSV_FILE_SRC_accountKey": {
+						"value": "[parameters('LS_CSV_FILE_SRC_accountKey')]"
+					},
+					"LS_CSV_FILTER_1_accountKey": {
+						"value": "[parameters('LS_CSV_FILTER_1_accountKey')]"
+					},
+					"LS_DEL_ADLS_DST_accountKey": {
+						"value": "[parameters('LS_DEL_ADLS_DST_accountKey')]"
+					},
+					"LS_DST_ADLS_accountKey": {
+						"value": "[parameters('LS_DST_ADLS_accountKey')]"
+					},
+					"LS_EXCEL_SRC_accountKey": {
+						"value": "[parameters('LS_EXCEL_SRC_accountKey')]"
+					},
+					"LS_FILTER_CSV_DST_accountKey": {
+						"value": "[parameters('LS_FILTER_CSV_DST_accountKey')]"
+					},
+					"LS_FILTER_SALES_SRC_accountKey": {
+						"value": "[parameters('LS_FILTER_SALES_SRC_accountKey')]"
+					},
+					"LS_GET_METADATA_MUTI_accountKey": {
+						"value": "[parameters('LS_GET_METADATA_MUTI_accountKey')]"
+					},
+					"LS_IMTS_EVENT_DST_accountKey": {
+						"value": "[parameters('LS_IMTS_EVENT_DST_accountKey')]"
+					},
+					"LS_INPUT_MULTI_FILE_accountKey": {
+						"value": "[parameters('LS_INPUT_MULTI_FILE_accountKey')]"
+					},
+					"LS_ITMS_DST_accountKey": {
+						"value": "[parameters('LS_ITMS_DST_accountKey')]"
+					},
+					"LS_ITMS_SRC_accountKey": {
+						"value": "[parameters('LS_ITMS_SRC_accountKey')]"
+					},
+					"LS_LOG_connectionString": {
+						"value": "[parameters('LS_LOG_connectionString')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"DS_FILTER_CSV_DST_properties_typeProperties_url": {
+						"value": "[parameters('DS_FILTER_CSV_DST_properties_typeProperties_url')]"
+					},
+					"DS_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('DS_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_BIKESTORE_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_BIKESTORE_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_BIKESTORE1_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_BIKESTORE1_properties_typeProperties_url')]"
+					},
+					"LS_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_properties_typeProperties_url')]"
+					},
+					"LS_CSV_FILE_SRC_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_FILE_SRC_properties_typeProperties_url')]"
+					},
+					"LS_CSV_FILTER_1_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_FILTER_1_properties_typeProperties_url')]"
+					},
+					"LS_DEL_ADLS_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_DEL_ADLS_DST_properties_typeProperties_url')]"
+					},
+					"LS_DST_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_DST_ADLS_properties_typeProperties_url')]"
+					},
+					"LS_EXCEL_SRC_properties_typeProperties_url": {
+						"value": "[parameters('LS_EXCEL_SRC_properties_typeProperties_url')]"
+					},
+					"LS_FILTER_CSV_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_FILTER_CSV_DST_properties_typeProperties_url')]"
+					},
+					"LS_FILTER_SALES_SRC_properties_typeProperties_url": {
+						"value": "[parameters('LS_FILTER_SALES_SRC_properties_typeProperties_url')]"
+					},
+					"LS_GET_METADATA_MUTI_properties_typeProperties_url": {
+						"value": "[parameters('LS_GET_METADATA_MUTI_properties_typeProperties_url')]"
+					},
+					"LS_IMTS_EVENT_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_IMTS_EVENT_DST_properties_typeProperties_url')]"
+					},
+					"LS_INPUT_MULTI_FILE_properties_typeProperties_url": {
+						"value": "[parameters('LS_INPUT_MULTI_FILE_properties_typeProperties_url')]"
+					},
+					"LS_ITMS_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_ITMS_DST_properties_typeProperties_url')]"
+					},
+					"LS_ITMS_SRC_properties_typeProperties_url": {
+						"value": "[parameters('LS_ITMS_SRC_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfdevapriso1_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_Lookup_accountKey": {
+						"value": "[parameters('LS_Lookup_accountKey')]"
+					},
+					"LS_MULTI_CSV_accountKey": {
+						"value": "[parameters('LS_MULTI_CSV_accountKey')]"
+					},
+					"LS_MULTI_CSV_DST_accountKey": {
+						"value": "[parameters('LS_MULTI_CSV_DST_accountKey')]"
+					},
+					"LS_PARQUET_accountKey": {
+						"value": "[parameters('LS_PARQUET_accountKey')]"
+					},
+					"LS_SWITCH_accountKey": {
+						"value": "[parameters('LS_SWITCH_accountKey')]"
+					},
+					"LS_SWITCH_DST_accountKey": {
+						"value": "[parameters('LS_SWITCH_DST_accountKey')]"
+					},
+					"LS_sales_DST_accountKey": {
+						"value": "[parameters('LS_sales_DST_accountKey')]"
+					},
+					"LS_switch_txt_accountKey": {
+						"value": "[parameters('LS_switch_txt_accountKey')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"LS_Lookup_properties_typeProperties_url": {
+						"value": "[parameters('LS_Lookup_properties_typeProperties_url')]"
+					},
+					"LS_MULTI_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_MULTI_CSV_properties_typeProperties_url')]"
+					},
+					"LS_MULTI_CSV_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_MULTI_CSV_DST_properties_typeProperties_url')]"
+					},
+					"LS_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_SWITCH_properties_typeProperties_url": {
+						"value": "[parameters('LS_SWITCH_properties_typeProperties_url')]"
+					},
+					"LS_SWITCH_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_SWITCH_DST_properties_typeProperties_url')]"
+					},
+					"LS_sales_DST_properties_typeProperties_url": {
+						"value": "[parameters('LS_sales_DST_properties_typeProperties_url')]"
+					},
+					"LS_switch_txt_properties_typeProperties_url": {
+						"value": "[parameters('LS_switch_txt_properties_typeProperties_url')]"
+					},
+					"SqlServer1_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
+					},
+					"SqlServer1_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_database')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevapriso1_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "adfdevapriso1_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_SQLSEEVER_password": {
+						"value": "[parameters('LS_SQLSEEVER_password')]"
+					},
+					"LS_SQLSEEVER_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSEEVER_properties_typeProperties_server')]"
+					},
+					"LS_SQLSEEVER_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSEEVER_properties_typeProperties_database')]"
+					},
+					"LS_SQLSEEVER_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSEEVER_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevapriso1_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "adfdevapriso1_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ITMS_EVENT_TRIGGER1_properties_typeProperties_scope": {
+						"value": "[parameters('ITMS_EVENT_TRIGGER1_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdevapriso1_ArmTemplate_2')]"
+			]
+		}
+	]
+}
