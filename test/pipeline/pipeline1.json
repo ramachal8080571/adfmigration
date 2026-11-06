@@ -20,6 +20,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "CPY_SQL_ADLS",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
